@@ -1,4 +1,5 @@
 import { Link } from 'lucide-react'
+import Image from 'next/image'
 import React from 'react'
 
 const Header = () => {
@@ -54,7 +55,7 @@ const Header = () => {
 						</svg>
 					</button>
 					<Link className="flex items-center ml-2 lg:ml-0" href="/">
-						<img src="/logo-dark.svg" alt="FantasyGF.ai Logo" className="w-auto h-7 hidden sm:block" />
+						<Image width={100} height={100} src="/logo-dark.svg" alt="FantasyGF.ai Logo" className="w-auto h-7 hidden sm:block" />
 						<img src="/logo-dark-no-icon.svg" alt="FantasyGF.ai Logo" className="w-auto h-7 block sm:hidden relative top-[2px]" />
 					</Link>
 					<div className="hidden lg:block lg:flex-shrink-0 lg:ml-4">
