@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import axios from 'axios'
+import Link from 'next/link'
 
 type character = {
 	avatar: string
@@ -36,7 +37,7 @@ const Explore = async () => {
 							alt="image"
 						/>
 						<div className="flex w-full h-full text-white">
-							<a
+							<Link
 								className="w-full h-full absolute inset-0 z-10"
 								title={character.about}
 								href={`/ai-girlfriend/${character.slug}`}
@@ -61,7 +62,7 @@ const Explore = async () => {
 								</div>
 							</div>
 							<div className="absolute top-2 right-2 flex flex-col gap-2 z-20">
-								<a
+								<Link
 									className="transition bg-gradient-to-t opacity-80 from-brand-600 to-brand-400 border-brand-400 border text-white p-1 rounded-full flex flex-col items-center text-sm"
 									title={`NSFW AI Girlfriend - ${character.name}`}
 									href={`/character/${character.slug}`}>
@@ -83,8 +84,8 @@ const Explore = async () => {
 											fillRule="evenodd"
 										/>
 									</svg>
-								</a>
-								<a
+								</Link>
+								<Link
 									className="transition bg-gradient-to-t opacity-80 from-lime-600 to-lime-400 border-lime-300 border text-white p-1 rounded-full flex flex-col items-center text-sm"
 									title={`AI Adult Phone Call with ${character.name}`}
 									href={`/ai-girlfriend/${character.slug}`}>
@@ -101,7 +102,7 @@ const Explore = async () => {
 											fill="currentColor"
 										/>
 									</svg>
-								</a>
+								</Link>
 							</div>
 							<div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent pt-[100px]">
 								<div className="flex flex-col w-full">

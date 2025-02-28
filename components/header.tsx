@@ -1,3 +1,4 @@
+import { Link } from 'lucide-react'
 import React from 'react'
 
 const Header = () => {
@@ -13,8 +14,7 @@ const Header = () => {
 							viewBox="0 0 24 24"
 							fill="none"
 							color="currentColor"
-							className="size-8"
-						>
+							className="size-8">
 							<path
 								d="M3 5C3 4.44772 3.44772 4 4 4L20 4C20.5523 4 21 4.44772 21 5C21 5.55229 20.5523 6 20 6L4 6C3.44772 6 3 5.55228 3 5Z"
 								fill="currentColor"
@@ -40,8 +40,7 @@ const Header = () => {
 							viewBox="0 0 24 24"
 							fill="none"
 							color="currentColor"
-							className="size-6"
-						>
+							className="size-6">
 							<path
 								d="M16.7929 16.7929C17.1834 16.4024 17.8166 16.4024 18.2071 16.7929L22.7071 21.2929C23.0976 21.6834 23.0976 22.3166 22.7071 22.7071C22.3166 23.0976 21.6834 23.0976 21.2929 22.7071L16.7929 18.2071C16.4024 17.8166 16.4024 17.1834 16.7929 16.7929Z"
 								fill="currentColor"
@@ -54,14 +53,10 @@ const Header = () => {
 							/>
 						</svg>
 					</button>
-					<a className="flex items-center ml-2 lg:ml-0" href="/">
+					<Link className="flex items-center ml-2 lg:ml-0" href="/">
 						<img src="/logo-dark.svg" alt="FantasyGF.ai Logo" className="w-auto h-7 hidden sm:block" />
-						<img
-							src="/logo-dark-no-icon.svg"
-							alt="FantasyGF.ai Logo"
-							className="w-auto h-7 block sm:hidden relative top-[2px]"
-						/>
-					</a>
+						<img src="/logo-dark-no-icon.svg" alt="FantasyGF.ai Logo" className="w-auto h-7 block sm:hidden relative top-[2px]" />
+					</Link>
 					<div className="hidden lg:block lg:flex-shrink-0 lg:ml-4">
 						<button className="w-[150px] max-w-full flex items-center gap-2 bg-accent/30 rounded-xl h-8 px-3 hover:bg-accent/50 transition-colors duration-300 text-muted-foreground">
 							<svg
@@ -71,8 +66,7 @@ const Header = () => {
 								viewBox="0 0 24 24"
 								fill="none"
 								color="currentColor"
-								className="size-4 flex-shrink-0"
-							>
+								className="size-4 flex-shrink-0">
 								<path
 									d="M16.7929 16.7929C17.1834 16.4024 17.8166 16.4024 18.2071 16.7929L22.7071 21.2929C23.0976 21.6834 23.0976 22.3166 22.7071 22.7071C22.3166 23.0976 21.6834 23.0976 21.2929 22.7071L16.7929 18.2071C16.4024 17.8166 16.4024 17.1834 16.7929 16.7929Z"
 									fill="currentColor"
@@ -93,8 +87,7 @@ const Header = () => {
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
-									className="inline-block size-6 mr-1 flex-shrink-0 transition-colors group-hover:text-brand-500"
-								>
+									className="inline-block size-6 mr-1 flex-shrink-0 transition-colors group-hover:text-brand-500">
 									<path
 										fill="currentColor"
 										d="M17.5 9.5C17.5 6.46 15.04 4 12 4S6.5 6.46 6.5 9.5c0 2.7 1.94 4.93 4.5 5.4V17H9v2h2v2h2v-2h2v-2h-2v-2.1c2.56-.47 4.5-2.7 4.5-5.4m-9 0C8.5 7.57 10.07 6 12 6s3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5"
@@ -106,8 +99,7 @@ const Header = () => {
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 128 128"
-									className="inline-block size-4 flex-shrink-0 transition-colors mr-2 group-hover:text-brand-500"
-								>
+									className="inline-block size-4 flex-shrink-0 transition-colors mr-2 group-hover:text-brand-500">
 									<path
 										d="m55.09 50.96s18.116-1.506 18.587 15.481c0.47 16.987-16.235 19.339-26.587 18.869-10.352-0.471-32.232-14.822-30.585-37.644l1.277-8.128 3.639-4.185s8.369-16.921 27.474-22.015c0 0 1.637-2.729 3.639-2.729 2.001 0 3.639 2.183 6.55 2.547s4.003-2.729 6.732-2.547 2.911 2.183 5.822 2.729 17.103 2.183 28.565 17.831c0 0 0.546 4.003 2.183 4.731s5.458 2.365 6.004 3.639 4.367 14.919 4.003 20.742c-0.364 5.822-2.001 32.932-20.014 41.301l-0.364 4.912s-13.464 12.008-34.024 10.553-26.096-3.621-30.93-10.189c-0.666-0.905-1.637-4.185-1.637-4.185l-1.819-3.821s-1.637-2.729 1.819-2.183c3.457 0.546 16.011 5.458 22.925 5.64s10.553-3.457 11.826-3.821c1.274-0.364 8.733-3.275 10.917-3.639 2.183-0.364 15.647-8.602 17.649-28.408s-15.83-31.451-26.019-31.633c0 0-6.368-0.182-7.824 0.728s-10.917 5.276-15.101 5.822c0 0-3.457 3.275-2.911 7.278s0.546 17.78 15.101 17.805c0 0 3.476-1.876 3.103-15.481z"
 										fill="currentColor"
@@ -119,8 +111,7 @@ const Header = () => {
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
-									className="inline-block size-6 mr-1 flex-shrink-0 transition-colors group-hover:text-brand-500"
-								>
+									className="inline-block size-6 mr-1 flex-shrink-0 transition-colors group-hover:text-brand-500">
 									<path
 										fill="currentColor"
 										d="M9.5 11c1.93 0 3.5 1.57 3.5 3.5S11.43 18 9.5 18S6 16.43 6 14.5S7.57 11 9.5 11m0-2C6.46 9 4 11.46 4 14.5S6.46 20 9.5 20s5.5-2.46 5.5-5.5c0-1.16-.36-2.23-.97-3.12L18 7.42V10h2V4h-6v2h2.58l-3.97 3.97C11.73 9.36 10.66 9 9.5 9"
