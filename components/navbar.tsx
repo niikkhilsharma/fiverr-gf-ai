@@ -1,8 +1,6 @@
 'use client'
-
-import React, { useState } from 'react'
-import { MaxWidthWrapper } from './max-width-wrapper'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useState } from 'react'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Input } from './ui/input'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 

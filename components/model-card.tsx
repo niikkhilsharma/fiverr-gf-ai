@@ -25,8 +25,8 @@ interface ModelCardProps {
 	age: number
 	avatar: string
 	name: string
-	personality: string
-	relationship: string
+	personality: Personality
+	relationship: Relationship
 	slug: string
 }
 
