@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
 			},
 			{ protocol: 'https', hostname: 'fantasyimg.ai', port: '', pathname: '/**' },
 			{ protocol: 'https', hostname: 'fantasygf.ai', port: '', pathname: '/**' },
+			{ protocol: 'https', hostname: 'example.com', port: '', pathname: '/**' },
 		],
 	},
 }

@@ -10,7 +10,7 @@ const Navbar = () => {
 
 	return (
 		<div className="flex border-b px-4 h-[68px] bg-background gap-4 items-center w-full z-20 sticky top-0">
-			<Image src="/logo.jpg" width={500} height={500} alt="logo" className="m-4 w-16 h-10" />
+			<Image unoptimized src="/logo.jpg" width={500} height={500} alt="logo" className="m-4 w-16 h-10" />
 			<div className="">
 				<div className="flex flex-1 gap-4 justify-between">
 					<div className="flex gap-4">
