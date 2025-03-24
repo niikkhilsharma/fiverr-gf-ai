@@ -1,0 +1,93 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [pgvector(map: "vector", schema: "extensions")]
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  amountPaid    Float     @default(0)
+  totalCredits  Int       @default(0)
+  usedCredits   Int       @default(0)
+
+  createdAt DateTime  @default(now())
+  accounts  Account[]
+  sessions  Session[]
+  Chat      Chat[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  providerAccountId String
+  access_token      String?
+  expires_at        Int?
+  id_token          String?
+  provider          String
+  refresh_token     String?
+  scope             String?
+  session_state     String?
+  token_type        String?
+  type              String
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  userId       String
+  expires      DateTime
+  sessionToken String   @unique
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Chat {
+  id        String    @id @default(cuid())
+  userId    String
+  modelSlug String
+  isDeleted Boolean   @default(false)
+  createdAt DateTime  @default(now())
+  User      User      @relation(fields: [userId], references: [id])
+  Message   Message[]
+}
+
+enum Role {
+  USER
+  MODEL
+}
+
+model Message {
+  id        Int                    @id @default(autoincrement())
+  chatId    String
+  role      Role
+  isImage   Boolean
+  content   String?
+  imageUrl  String?
+  embedding Unsupported("vector")?
+  createdAt DateTime               @default(now())
+  Chat      Chat                   @relation(fields: [chatId], references: [id])
+}

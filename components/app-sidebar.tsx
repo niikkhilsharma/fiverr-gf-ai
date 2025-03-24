@@ -55,17 +55,12 @@ export function AppSidebar() {
 
 	const socialItems = [
 		{ title: 'Instagram', url: 'https://instagram.com/gf_ai', icon: Instagram },
-		{
-			title: 'Affiliate',
-			url: 'https://www.fiverr.com/gf_ai',
-			icon: CircleDollarSign,
-		},
 		{ title: 'Contact', url: 'https://www.fiverr.com/gf_ai', icon: Mail },
 	]
 
 	return (
-		<Sidebar className="pt-12">
-			<SidebarHeader className="" />
+		<Sidebar>
+			<SidebarHeader className="pt-12" />
 			<SidebarContent>
 				<SidebarGroup>
 					<SidebarGroupContent>

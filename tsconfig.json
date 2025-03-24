@@ -28,7 +28,8 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"app/classify/route.js",
-		"app/classify/pipeline.js"
+		"app/classify/pipeline.js",
+		"utils/streamparser.ts"
 	],
 	"exclude": ["node_modules"]
 }

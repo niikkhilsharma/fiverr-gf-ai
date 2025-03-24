@@ -33,10 +33,8 @@ export default function RootLayout({
 					<Navbar />
 					<SidebarProvider>
 						<AppSidebar />
-						<main className="w-full">
-							{/* <SidebarTrigger /> */}
-							<div className="w-full">{children}</div>
-						</main>
+						{/* <main className="mt-[64px]">{children}</main> */}
+						<main className="flex justify-center items-center w-full pt-[64px] fixed top-0 md:pl-[16rem]">{children}</main>
 					</SidebarProvider>
 				</ThemeProvider>
 			</body>

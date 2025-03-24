@@ -204,7 +204,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		breastSize: 'Large',
 		buttSize: 'Medium',
 		occupation: Occupation.Model,
-		hobbies: [Hobbies.SalsaDancing, Hobbies.DIYCrafting],
+		hobbies: [Hobbies.SalsaDancing, Hobbies.DIYCrafting, Hobbies.Anime],
 		clothing: Clothing.LongDress,
 		specialFeatures: 'Tattoos',
 	},
