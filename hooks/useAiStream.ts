@@ -94,7 +94,7 @@ export function useAiStream({ api, modelSlug }: { api: string; modelSlug: string
 											...msg,
 											isImage: true,
 											imageUrl,
-											content: 'Generated image', // Optional caption or description
+											content: 'Generated image',
 									  }
 									: msg
 							)
