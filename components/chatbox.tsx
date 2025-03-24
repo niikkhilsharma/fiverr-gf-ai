@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import ChatBubble from './chat-bubble'
 import { FemaleModelTypes } from '@/utils/data/models'

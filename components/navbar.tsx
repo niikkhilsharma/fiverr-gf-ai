@@ -1,13 +1,9 @@
 'use client'
-import { useState } from 'react'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Input } from './ui/input'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import Image from 'next/image'
 
 const Navbar = () => {
-	const [searchText, setSearchText] = useState('')
-
 	return (
 		<div className="flex border-b px-4 h-[68px] bg-background gap-4 items-center w-full z-20 fixed top-0">
 			<Image unoptimized src="/assets/images/logo.jpg" width={500} height={500} alt="logo" className="m-4 w-16 h-10" />

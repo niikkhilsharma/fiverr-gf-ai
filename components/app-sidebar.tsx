@@ -1,16 +1,6 @@
-import {
-	CircleDollarSign,
-	Compass,
-	Image,
-	Images,
-	Instagram,
-	Mail,
-	Medal,
-	MessageCircleMore,
-	SmilePlusIcon,
-} from 'lucide-react'
+'use client'
+import { Compass, Image, Images, Instagram, Mail, MessageCircleMore, SmilePlusIcon } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-
 import {
 	Sidebar,
 	SidebarContent,
@@ -28,19 +18,24 @@ import { Button, buttonVariants } from './ui/button'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Separator } from '@/components/ui/separator'
+import { usePathname } from 'next/navigation'
 
 export function AppSidebar() {
+	const pathname = usePathname()
+	const activePath = pathname.split('/')[1]
+	console.log(pathname, activePath)
+
 	const generalItems = [
 		{
 			title: 'Explore',
-			url: '',
+			url: '/',
 			icon: Compass,
 		},
-		{
-			title: 'Leaderboard',
-			url: '#',
-			icon: Medal,
-		},
+		// {
+		// 	title: 'Leaderboard',
+		// 	url: '#',
+		// 	icon: Medal,
+		// },
 		{
 			title: 'Generate Image',
 			url: '/generate-image',
@@ -84,7 +79,8 @@ export function AppSidebar() {
 										href={item.url}
 										className={cn(
 											buttonVariants({ variant: 'secondary' }),
-											`justify-start w-full ${item.title === 'Settings' ? 'w-full bg-background' : ''}`
+											`justify-start w-full hover:bg-destructive-foreground ${item.title === 'Settings' && 'w-full bg-background'}`,
+											activePath === item.url.replace('/', '') && 'bg-destructive-foreground'
 										)}>
 										<item.icon />
 										<span>{item.title}</span>
@@ -113,7 +109,8 @@ export function AppSidebar() {
 										href={item.url}
 										className={cn(
 											buttonVariants({ variant: 'secondary' }),
-											`justify-start w-full ${item.title === 'Settings' ? 'w-full bg-background' : ''}`
+											`justify-start w-full ${item.title === 'Settings' && 'w-full bg-background'}`,
+											activePath === item.url.replace('/', '') && 'bg-destructive-foreground'
 										)}>
 										<item.icon />
 										<span>{item.title}</span>
@@ -133,7 +130,8 @@ export function AppSidebar() {
 										href={item.url}
 										className={cn(
 											buttonVariants({ variant: 'secondary' }),
-											`justify-start w-full ${item.title === 'Settings' ? 'w-full bg-background' : ''}`
+											`justify-start w-full ${item.title === 'Settings' && 'w-full bg-background'}`,
+											activePath === item.url.replace('/', '') && 'bg-destructive-foreground'
 										)}>
 										<item.icon />
 										<span>{item.title}</span>

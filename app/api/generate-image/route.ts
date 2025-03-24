@@ -1,6 +1,4 @@
-import { InferenceClient } from '@huggingface/inference'
 import { NextResponse } from 'next/server'
-import { createMistral } from '@ai-sdk/mistral'
 
 export async function GET() {
 	try {

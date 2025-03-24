@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button, buttonVariants } from './ui/button'
+import { buttonVariants } from './ui/button'
 import { Input } from './ui/input'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'

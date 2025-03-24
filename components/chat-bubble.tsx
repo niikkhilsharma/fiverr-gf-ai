@@ -2,6 +2,7 @@ import React from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import { ChatMessageType } from '@/app/chat/chat'
 
 const ChatBubble = ({
 	message,
@@ -9,7 +10,7 @@ const ChatBubble = ({
 	isImage,
 	imageUrl,
 }: {
-	message: any
+	message: ChatMessageType
 	avatar: string
 	isImage: boolean
 	imageUrl?: string
@@ -37,7 +38,7 @@ const ChatBubble = ({
 					) : (
 						<p className={cn('bg-foreground/15 p-2 pr-4 rounded-lg')}>{message.content}</p>
 					)}
-					<p className="text-end mt-1 text-[0.55rem]">{message.time}</p>
+					<p className="text-end mt-1 text-[0.55rem]">{message.createdAt}</p>
 				</div>
 			</div>
 		</div>

@@ -28,7 +28,7 @@ export default function Chat() {
 	const chatContainerRef = useRef<HTMLDivElement>(null)
 
 	const modelSlug = searchParams.get('model-slug')!
-	if (!modelSlug) router.push('/')
+
 	const [showModelPreview, setShowModelPreview] = useState(false)
 	const modelData = FemalemodelData.find(model => model.slug === modelSlug)
 
@@ -39,6 +39,7 @@ export default function Chat() {
 
 	// Redirect if model not found
 	useEffect(() => {
+		if (!modelSlug) router.push('/')
 		if (!modelData) router.push('/')
 	}, [modelData, router])
 
@@ -58,14 +59,14 @@ export default function Chat() {
 		}
 	}
 
-	if (!modelData) return null // Guard clause while redirecting
+	if (!modelData) return null
 
 	return (
 		<div className="w-full flex h-svh">
-			<div className="w-1/4">
+			<div className="hidden md:block w-full max-w-80">
 				<ProfileSearch />
 			</div>
-			<div className={cn(showModelPreview ? 'w-1/2' : 'w-3/4', 'pb-20 flex flex-col')}>
+			<div className={cn('pb-20 w-full flex flex-col')}>
 				<div className="border-b border-l p-4 flex items-center gap-4 w-full bg-background border-r sticky top-[64px] z-10">
 					<Avatar>
 						<AvatarImage src={modelData.avatar} />
@@ -110,7 +111,7 @@ export default function Chat() {
 			</div>
 
 			{showModelPreview && (
-				<div className="w-1/4">
+				<div className="w-full max-w-80">
 					<ModelPreview modelData={modelData} />
 				</div>
 			)}

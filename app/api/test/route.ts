@@ -4,7 +4,7 @@ import { ChatOpenAI } from '@langchain/openai'
 import { NextResponse } from 'next/server'
 import { streamText } from 'ai'
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible'
-import FemalemodelData from '@/utils/data/models'
+import FemalemodelData, { FemaleModelTypes } from '@/utils/data/models'
 
 export const maxDuration = 60
 
@@ -21,8 +21,10 @@ export async function POST(request: Request) {
 		// Check if the user wants to generate an image
 		const shouldGenerateImage = await generateImageCheck(message)
 
+		const modelData = FemalemodelData.find(model => model.slug === modelSlug)!
+
 		if (shouldGenerateImage) {
-			const imageDescription = await parseUserImageMessage(message)
+			const imageDescription = await parseUserImageMessage({ message, modelData: modelData })
 			const finalDescription = imageDescription || message
 			return await generateImageResponse({ message: finalDescription })
 		} else {
@@ -65,7 +67,8 @@ async function generateImageCheck(prompt: string) {
 }
 
 // Function to extract image description from user message
-async function parseUserImageMessage(message: string) {
+async function parseUserImageMessage({ message, modelData }: { message: string; modelData: FemaleModelTypes }) {
+	console.log(`{${JSON.stringify(modelData)}}`)
 	const promptTemplate = ChatPromptTemplate.fromMessages([
 		[
 			'system',
@@ -73,7 +76,8 @@ async function parseUserImageMessage(message: string) {
        Only extract relevant information from the text.
        If you do not know what description of image user
        wants to generate then return the original message.
-       But you cannot return null.`,
+       But you cannot return null. Add what the user wants to generate
+			 with the model details {${JSON.stringify(modelData)}}`,
 		],
 		['human', '{text}'],
 	])
