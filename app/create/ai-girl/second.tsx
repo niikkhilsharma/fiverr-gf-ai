@@ -8,7 +8,6 @@ import { ChatModel } from '@prisma/client'
 export default function Second({
 	femaleModel,
 	setFemaleModel,
-	setNextCount,
 }: {
 	femaleModel: Partial<ChatModel>
 	setFemaleModel: React.Dispatch<React.SetStateAction<Partial<ChatModel>>>

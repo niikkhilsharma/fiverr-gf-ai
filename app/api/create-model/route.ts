@@ -33,19 +33,19 @@ export async function POST(req: Request) {
 		}
 
 		// 3. Save the model to your database
-		const savedModel = await prisma.chatModel.create({
-			data: {
-				...sanitizedModel,
-				// Convert array fields to appropriate database storage
-				specialFeatures: sanitizedModel.specialFeatures || [],
-				hobbies: sanitizedModel.hobbies,
-				clothing: sanitizedModel.clothing,
-				// Optionally handle optional fields
-				breastSize: sanitizedModel.breastSize,
-				buttSize: sanitizedModel.buttSize,
-				dickSize: sanitizedModel.dickSize,
-			},
-		})
+		// const savedModel = await prisma.chatModel.create({
+		// 	data: {
+		// 		...sanitizedModel,
+		// 		// Convert array fields to appropriate database storage
+		// 		specialFeatures: sanitizedModel.specialFeatures || [],
+		// 		hobbies: sanitizedModel.hobbies,
+		// 		clothing: sanitizedModel.clothing,
+		// 		// Optionally handle optional fields
+		// 		breastSize: sanitizedModel.breastSize,
+		// 		buttSize: sanitizedModel.buttSize,
+		// 		dickSize: sanitizedModel.dickSize,
+		// 	},
+		// })
 
 		// Return a success response
 		return NextResponse.json(

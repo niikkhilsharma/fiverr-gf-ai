@@ -1,5 +1,5 @@
 'use client'
-import { ArrowRight, Clover } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 import First from './first'
 import { Button } from '@/components/ui/button'
