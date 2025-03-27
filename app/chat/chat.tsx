@@ -33,7 +33,7 @@ export default function Chat() {
 	const modelData = FemalemodelData.find(model => model.slug === modelSlug)
 
 	const { isStreaming, messages, sendMessage } = useAiStream({
-		api: '/api/test',
+		api: '/api/chat',
 		modelSlug: modelSlug,
 	})
 

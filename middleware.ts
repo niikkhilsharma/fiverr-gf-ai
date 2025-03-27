@@ -7,7 +7,7 @@ import { NextRequest, NextResponse } from 'next/server'
 const { auth } = NextAuth(authConfig)
 
 export default auth(async function middleware(request: NextRequest & { auth: Session | null }) {
-	const allowedPaths = ['/']
+	const allowedPaths = ['/', '/api/chat', '/chat']
 
 	// Add a new header x-current-path which passes the path to downstream components
 	const headers = new Headers(request.headers)

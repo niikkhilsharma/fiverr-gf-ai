@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { ChatMessageType } from '@/app/chat/chat'
+import { FormatDateTime } from '@/utils/time'
 
 const ChatBubble = ({
 	message,
@@ -38,7 +39,7 @@ const ChatBubble = ({
 					) : (
 						<p className={cn('bg-foreground/15 p-2 pr-4 rounded-lg')}>{message.content}</p>
 					)}
-					<p className="text-end mt-1 text-[0.55rem]">{message.createdAt}</p>
+					<p className="text-end mt-1 text-[0.55rem]">{FormatDateTime(message.createdAt)}</p>
 				</div>
 			</div>
 		</div>

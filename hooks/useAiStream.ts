@@ -11,18 +11,24 @@ export function useAiStream({ api, modelSlug }: { api: string; modelSlug: string
 			role: 'bot',
 			isImage: false,
 			content: 'Hello, darling. I am your AI girlfriend. How can I help you today?',
-			createdAt: '12:00am',
+			createdAt: '2023-05-01 12:00:00',
 		},
 	])
 
-	const currentTime = () => {
+	const currentDateTime = () => {
 		const now = new Date()
-		let hours = now.getHours()
+
+		// Format date as YYYY-MM-DD
+		const year = now.getFullYear()
+		const month = (now.getMonth() + 1).toString().padStart(2, '0')
+		const day = now.getDate().toString().padStart(2, '0')
+
+		// Format time as HH:MM:SS in 24-hour format
+		const hours = now.getHours().toString().padStart(2, '0')
 		const minutes = now.getMinutes().toString().padStart(2, '0')
-		const ampm = hours >= 12 ? 'pm' : 'am'
-		hours = hours % 12
-		hours = hours ? hours : 12
-		return `${hours}:${minutes}${ampm}`
+		const seconds = now.getSeconds().toString().padStart(2, '0')
+
+		return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
 	}
 
 	const sendMessage = useCallback(
@@ -35,7 +41,7 @@ export function useAiStream({ api, modelSlug }: { api: string; modelSlug: string
 				isImage: false,
 				role: 'user',
 				content: inputMessage,
-				createdAt: currentTime(),
+				createdAt: currentDateTime(),
 			}
 
 			// Add user message to state
@@ -52,7 +58,7 @@ export function useAiStream({ api, modelSlug }: { api: string; modelSlug: string
 					role: 'bot',
 					isImage: false,
 					content: '',
-					createdAt: currentTime(),
+					createdAt: currentDateTime(),
 				},
 			])
 
@@ -155,7 +161,7 @@ export function useAiStream({ api, modelSlug }: { api: string; modelSlug: string
 				role: 'bot',
 				isImage: false,
 				content: 'Hello, darling. I am your AI girlfriend. How can I help you today?',
-				createdAt: currentTime(),
+				createdAt: currentDateTime(),
 			},
 		])
 	}, [])

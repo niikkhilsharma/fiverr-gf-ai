@@ -81,13 +81,370 @@ enum Role {
 }
 
 model Message {
-  id        Int                    @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   chatId    String
   role      Role
   isImage   Boolean
   content   String?
   imageUrl  String?
-  embedding Unsupported("vector")?
-  createdAt DateTime               @default(now())
-  Chat      Chat                   @relation(fields: [chatId], references: [id])
+  createdAt DateTime
+  Chat      Chat     @relation(fields: [chatId], references: [id])
+}
+
+enum Ethnicity {
+  CAUCASIAN
+  LATINA
+  ASIAN
+  ARABIC
+  BLACK
+  INDIAN
+}
+
+enum EyeColor {
+  BROWN
+  BLUE
+  GREEN
+  YELLOW
+  RED
+}
+
+enum HairStyle {
+  STRAIGHT
+  BRAIDS
+  BANGS
+  CURLY
+  BUN
+  SHORT
+  LONG
+  PONYTAIL
+  PIGTAILS
+  BUZZ_CUT
+  SLIC_BACK
+  MAN_BUN
+  DREADLOCKS
+  BALD
+}
+
+enum HairColor {
+  BLACK
+  BRUNETTE
+  BLONDE
+  PINK
+  REDHEAD
+  GREEN
+  BROWN
+  GINGER
+  GRAY
+  WHITE
+}
+
+enum BodyType {
+  FIT
+  SKINNY
+  MUSCULAR
+  CHUBBY
+  SLIM
+  WIDE
+}
+
+enum Personality {
+  CAREGIVER
+  SAGE
+  INNOCENT
+  JESTER
+  TEMPTRESS
+  DOMINANT
+  SUBMISSIVE
+  LOVER
+  NYMPHO
+  MEAN
+  CONFIDANT
+  EXPERIMENTER
+  PROTECTOR
+  HERO
+  TOY_BOY
+  BEAST
+  REBEL
+  SCHOLAR
+}
+
+enum Occupation {
+  TEACHER
+  NURSE
+  INTERIOR_DESIGNER
+  BEAUTY_THERAPIST
+  STUDENT
+  SOLDIER
+  STEWARDESS
+  CHEF
+  PHOTOGRAPHER
+  MODEL
+  ACTRESS
+  LIBRARIAN
+  NUTRITIONIST
+  FLORIST
+  WEDDING_PLANNER
+  FASHION_BLOGGER
+  YOGA_INSTRUCTOR
+  CHILDCARE_WORKER
+  SOCIAL_WORKER
+  EXECUTIVE_ASSISTANT
+  EVENT_COORDINATOR
+  MAKEUP_ARTIST
+  ART_TEACHER
+  DANCE_INSTRUCTOR
+  BOUTIQUE_OWNER
+  JEWELRY_MAKER
+  PERFUMER
+  VOICE_COACH
+  PASTRY_CHEF
+  PILATES_INSTRUCTOR
+  HAIRSTYLIST
+  DRAG_PERFORMER
+  FLORAL_DESIGNER
+  THERAPIST
+}
+
+enum Relationship {
+  STRANGER
+  SCHOOL_MATE
+  COLLEAGUE
+  MENTOR
+  GIRLFRIEND
+  SEX_FRIEND
+  WIFE
+  MISTRESS
+  FRIEND
+  BEST_FRIEND
+  STEP_SISTER
+  STEP_MOM
+  BOYFRIEND
+  HUSBAND
+  STEP_BROTHER
+  STEP_DAD
+}
+
+enum SpecialFeatures {
+  PUBIC_HAIR
+  PREGNANT
+  GLASSES
+  FRECKLES
+  TATTOOS
+  BELLY_PIERCINGS
+  NIPPLE_PIERCINGS
+}
+
+enum Hobby {
+  FITNESS
+  VLOGGING
+  TRAVELING
+  HIKING
+  GAMING
+  PARTYING
+  ANIME
+  COSPLAY
+  WRITING
+  DIY_CRAFTING
+  PHOTOGRAPHY
+  VOLUNTEERING
+  CARS
+  ART
+  WATCHING_NETFLIX
+  MANGA_AND_ANIME
+  MARTIAL_ARTS
+  BAKING
+  READING
+  PAINTING
+  KNITTING
+  YOGA
+  SURFING
+  PLAYING_PIANO
+  BIRD_WATCHING
+  SKATEBOARDING
+  POTTERY
+  STAND_UP_COMEDY
+  ASTROLOGY
+  MOUNTAIN_BIKING
+  SCUBA_DIVING
+  SALSA_DANCING
+  ANTIQUING
+  CALLIGRAPHY
+  HORSEBACK_RIDING
+  ARCHERY
+  CHESS
+  CYCLING
+  INTERIOR_DECORATING
+  GARDENING
+  DANCING
+  EVENT_PLANNING
+  COOKING
+  MECHANIC
+  ASTRONOMY
+  FLIRTING
+  SWIMMING
+  PILATES
+}
+
+enum Clothing {
+  BIKINI
+  SKIRT
+  CHEERLEADER_OUTFIT
+  PENCIL_DRESS
+  LONG_DRESS
+  WOMENS_BASKETBALL_JERSEY
+  SOCCER_UNIFORM
+  TENNIS_OUTFIT
+  SWIMSUIT
+  SPORTSWEAR
+  WEDDING_DRESS
+  FANCY_DRESS
+  WITCH_COSTUME
+  SUMMER_DRESS
+  LINGERIE
+  LATEX_OUTFIT
+  SCHOOL_UNIFORM
+  YOGA_OUTFIT
+  LEATHER_OUTFIT
+  PRINCESS_DRESS
+  CORSET
+  ANGEL_COSTUME
+  MAID_OUTFIT
+  MEDIEVAL_ARMOR
+  LAB_COAT
+  COWBOY_ATTIRE
+  CARNIVAL_COSTUME
+  CASUAL_WEAR
+  NURSE_UNIFORM
+  SANTA_CLAUS_OUTFIT
+  POLICE_UNIFORM
+  STEAMPUNK_GEAR
+  SUPERHERO_COSTUME
+  TEACHERS_ATTIRE
+  VIKING_COSTUME
+  FIREFIGHTER_GEAR
+  MILITARY_UNIFORM
+  CONSTRUCTION_OUTFIT
+  LONG_COAT
+  HOODIE
+  JEANS
+  LEGGINGS
+  NINJA_OUTFIT
+  PAJAMAS
+  CLOWN_COSTUME
+  FLIGHT_ATTENDANT_UNIFORM
+  BARISTA_OUTFIT
+  BELLY_DANCER_COSTUME
+  GOTH_ATTIRE
+  PIRATE_COSTUME
+  PRISONER_OUTFIT
+  RACE_DRIVER_SUIT
+  HIJAB
+  TUTU
+  PONCHO
+  HIP_HOP_ATTIRE
+  SKATEPARK_GEAR
+  LUMBERJACK_OUTFIT
+  ADVENTURER_GEAR
+  SAILOR_UNIFORM
+  GOLF_ATTIRE
+  ONESIE
+  OVERSIZED_SHIRT
+  TRIBAL_ATTIRE
+  SECRETARY_OUTFIT
+  POP_STAR_COSTUME
+  SUIT_AND_SHIRT
+  JEANS_AND_TSHIRT
+  CHINOS_AND_SHIRT
+  BERMUDA_AND_POLO
+  PANTS_AND_SWEATER
+  TRACKSUIT
+  BLAZER_AND_TSHIRT
+  HOODIE_AND_CARGO
+  DENIM_AND_KHAKIS
+  CARDIGAN_AND_SHIRT
+  PEACOAT_AND_TURTLENECK
+  VEST_AND_LONG_SLEEVE
+  TRENCH_AND_COLLARED_SHIRT
+  JACKET_AND_CHINOS
+  POLO_AND_LINEN_PANTS
+  SHIRT_AND_CORDUROY_PANTS
+  SUIT_AND_TIE
+  TUXEDO
+  SHORTS_AND_HENLEY
+  HENLEY_AND_SHORTS
+  LINEN_SHIRT_AND_PANTS
+  RUGBY_SHIRT_AND_JOGGERS
+  SWIM_SHORTS
+  TEE_AND_LEATHER_PANTS
+  MILITARY
+  FIREFIGHTER
+  POLICE
+  F1_DRIVER
+  MARTIAL_ARTS_BLACK_BELT
+  PILOT
+  WAITER
+  CHEF
+  BARISTA
+  BUILDER
+  STEAMPUNK
+  ASTRONAUT
+  HIP_HOP
+  GOTHIC
+  PIRATE
+  SCOTTISH
+  PRINCE
+  MONK
+  PRISONER
+  SANTA
+  SAMURAI
+  BASKETBALL
+  SOCCER
+  TENNIS
+  RUGBY
+  GOLFER
+  SURFER
+  SKI
+  LUMBERJACK
+  BIKER
+  COWBOY
+  SCIENTIST
+  NINJA
+  KNIGHT
+}
+
+model ChatModel {
+  id              String            @id @default(cuid())
+  name            String
+  age             Int
+  slug            String            @unique
+  avatar          String
+  about           String
+  ethnicity       Ethnicity
+  eyeColor        EyeColor
+  hairStyle       HairStyle
+  hairColor       HairColor
+  bodyType        BodyType
+  personality     Personality
+  occupation      Occupation
+  relationship    Relationship
+  specialFeatures SpecialFeatures[]
+  hobbies         Hobby[]
+  clothing        Clothing
+
+  isRealistic Boolean
+
+  // Optional gender-specific fields
+  breastSize String?
+  buttSize   String?
+  dickSize   String?
+
+  // Discriminator to differentiate between male and female models
+  gender ModelGender
+
+  @@index([gender])
+}
+
+enum ModelGender {
+  FEMALE
+  MALE
 }

@@ -62,7 +62,7 @@ export function AppSidebar() {
 						<SidebarMenu>
 							<SidebarMenuItem className="my-4">
 								<Link
-									href="#"
+									href={activePath === '' ? '/create/ai-girl' : '/create/ai-boy'}
 									className={cn(
 										buttonVariants({
 											variant: 'destructive',

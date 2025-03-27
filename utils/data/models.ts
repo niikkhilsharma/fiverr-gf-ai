@@ -36,6 +36,17 @@ enum Hobbies {
 	HorsebackRiding = 'Horseback Riding',
 	Archery = 'Archery',
 	Chess = 'Chess',
+	Cycling = 'Cycling',
+	InteriorDecorating = 'Interior Decorating',
+	Gardening = 'Gardening',
+	Dancing = 'Dancing',
+	EventPlanning = 'Event Planning',
+	Cooking = 'Cooking',
+	Mechanic = 'Mechanic',
+	Astronomy = 'Astronomy',
+	Flirting = 'Flirting',
+	Swimming = 'Swimming',
+	Pilates = 'Pilates',
 }
 
 enum Occupation {
@@ -69,9 +80,39 @@ enum Occupation {
 	VoiceCoach = 'Voice Coach',
 	PastryChef = 'Pastry Chef',
 	PilatesInstructor = 'Pilates Instructor',
+	FashionDesigner = 'Fashion Designer',
+	Chiropractor = 'Chiropractor',
+	Hairstylist = 'Hairstylist',
+	DragPerformer = 'Drag Performer',
+	FloralDesigner = 'Floral Designer',
+	EventPlanner = 'Event Planner',
+	VisualArtist = 'Visual Artist',
+	GraphicDesigner = 'Graphic Designer',
+	Actor = 'Actor',
+	Dancer = 'Dancer',
+	Choreographer = 'Choreographer',
+	TheaterDirector = 'Theater Director',
+	SingerMusician = 'Singer/Musician',
+	VoiceActor = 'Voice Actor',
+	PersonalTrainer = 'Personal Trainer',
+	MassageTherapist = 'Massage Therapist',
+	Dermatologist = 'Dermatologist',
+	PlasticSurgeon = 'Plastic Surgeon',
+	LGBTQAdvocate = 'LGBTQ+ Advocate',
+	Therapist = 'Therapist',
+	NonprofitManager = 'Nonprofit Manager',
+	CommunityOrganizer = 'Community Organizer',
+	Journalist = 'Journalist',
+	ContentCreator = 'Content Creator',
+	SocialMediaManager = 'Social Media Manager',
+	PublicRelationsSpecialist = 'Public Relations Specialist',
+	Entrepreneur = 'Entrepreneur',
+	MarketingSpecialist = 'Marketing Specialist',
+	RealEstateAgent = 'Real Estate Agent',
+	TravelAgent = 'Travel Agent',
 }
 
-enum Clothing {
+enum FemalClothing {
 	Bikini = 'Bikini',
 	Skirt = 'Skirt',
 	CheerleaderOutfit = 'Cheerleader Outfit',
@@ -140,49 +181,172 @@ enum Clothing {
 	PopStarCostume = 'Pop Star Costume',
 }
 
+enum MaleClothing {
+	SuitAndShirt = 'Suit And Shirt',
+	JeansAndTShirt = 'Jeans And T-Shirt',
+	ChinosAndShirt = 'Chinos And Shirt',
+	BermudaAndPolo = 'Bermuda And Polo',
+	PantsAndSweater = 'Pants And Sweater',
+	Tracksuit = 'Tracksuit',
+	BlazerAndTShirt = 'Blazer And T-Shirt',
+	HoodieAndCargo = 'Hoodie And Cargo',
+	DenimAndKhakis = 'Denim And Khakis',
+	CardiganAndShirt = 'Cardigan And Shirt',
+	PeacoatAndTurtleneck = 'Peacoat And Turtleneck',
+	VestAndLongSleeve = 'Vest And Long Sleeve',
+	TrenchAndCollaredShirt = 'Trench And Collared Shirt',
+	JacketAndChinos = 'Jacket And Chinos',
+	PoloAndLinenPants = 'Polo And Linen Pants',
+	ShirtAndCorduroyPants = 'Shirt And Corduroy Pants',
+	SuitAndTie = 'Suit And Tie',
+	Tuxedo = 'Tuxedo',
+	ShortsAndHenley = 'Shorts And Henley',
+	HenleyAndShorts = 'Henley And Shorts',
+	LinenShirtAndPants = 'Linen Shirt And Pants',
+	RugbyShirtAndJoggers = 'Rugby Shirt And Joggers',
+	SwimShorts = 'Swim Shorts',
+	TeeAndLeatherPants = 'Tee And Leather Pants',
+	Military = 'Military',
+	Firefighter = 'Firefighter',
+	Police = 'Police',
+	F1Driver = 'F1 Driver',
+	MartialArtsBlackBelt = 'Martial Arts Black Belt',
+	Pilot = 'Pilot',
+	Waiter = 'Waiter',
+	Chef = 'Chef',
+	Barista = 'Barista',
+	Builder = 'Builder',
+	Steampunk = 'Steampunk',
+	Astronaut = 'Astronaut',
+	HipHop = 'Hip-Hop',
+	Gothic = 'Gothic',
+	Pirate = 'Pirate',
+	Scottish = 'Scottish',
+	Prince = 'Prince',
+	Monk = 'Monk',
+	Prisoner = 'Prisoner',
+	Santa = 'Santa',
+	Samurai = 'Samurai',
+	Basketball = 'Basketball',
+	Soccer = 'Soccer',
+	Tennis = 'Tennis',
+	Rugby = 'Rugby',
+	Golfer = 'Golfer',
+	Surfer = 'Surfer',
+	Ski = 'Ski',
+	Lumberjack = 'Lumberjack',
+	Biker = 'Biker',
+	Cowboy = 'Cowboy',
+	Scientist = 'Scientist',
+	Ninja = 'Ninja',
+	Knight = 'Knight',
+}
+
+enum Personality {
+	Caregiver = 'Caregiver',
+	Innocent = 'Innocent',
+	Temptress = 'Temptress',
+	Nympho = 'Nympho',
+	Mean = 'Mean',
+	Experimenter = 'Experimenter',
+	Custom = 'Custom personality',
+	Protector = 'Protector',
+	Sage = 'Sage',
+	Hero = 'Hero',
+	Jester = 'Jester',
+	ToyBoy = 'Toy Boy',
+	Dominant = 'Dominant',
+	Submissive = 'Submissive',
+	Lover = 'Lover',
+	Beast = 'Beast',
+	Confidant = 'Confidant',
+	Rebel = 'Rebel',
+	Scholar = 'Scholar',
+}
+
+enum Relationship {
+	Stranger = 'Stranger',
+	SchoolMate = 'School Mate',
+	Colleague = 'Colleague',
+	Mentor = 'Mentor',
+	Girlfriend = 'Girlfriend',
+	SexFriend = 'Sex Friend',
+	Wife = 'Wife',
+	Mistress = 'Mistress',
+	Friend = 'Friend',
+	BestFriend = 'Best Friend',
+	StepSister = 'Step Sister',
+	StepMom = 'Step Mom',
+	Boyfriend = 'Boyfriend',
+	Husband = 'Husband',
+	StepBrother = 'Step Brother',
+	StepDad = 'Step Dad',
+}
+
+enum specialFeatures {
+	PubicHair = 'Pubic Hair',
+	Glasses = 'Glasses',
+	Tattoos = 'Tattoos',
+	Freckles = 'Freckles',
+	Pregnant = 'Pregnant',
+	BellyPiercings = 'Belly Piercings',
+	NipplePiercings = 'Niple Piercings',
+}
+
+enum Ethnicity {
+	Caucasian = 'Caucasian',
+	Latina = 'Latina',
+	Asian = 'Asian',
+	Arabic = 'Arabic',
+	BlackAfro = 'Black/Afro',
+	Indian = 'Indian',
+	Latino = 'Latino',
+	Black = 'Black',
+}
+
+enum EyeColor {
+	Brown = 'Brown',
+	Blue = 'Blue',
+	Green = 'Green',
+	Yellow = 'Yellow',
+	Red = 'Red',
+}
 export interface FemaleModelTypes {
 	about: string
 	age: number
 	avatar: string
 	name: string
 	slug: string
-	ethnicity: 'Caucasian' | 'Latina' | 'Asian' | 'Arabic' | 'Black/Afro' | 'Indian'
-	eyeColor: 'Brown' | 'Blue' | 'Green' | 'Yellow' | 'Red'
+	ethnicity: Ethnicity
+	eyeColor: EyeColor
 	hairStyle: 'Straight' | 'Braids' | 'Bangs' | 'curly' | 'Bun' | 'Short' | 'Long' | 'Ponytail' | 'Pigtails'
 	hairColor: 'Black' | 'Brunette' | 'Blonde' | 'Pink' | 'Redhead' | 'Green'
 	bodyType: 'Fit' | 'Skinny' | 'Muscular' | 'Chubby'
 	breastSize: 'Flat' | 'Small' | 'Medium' | 'Large' | 'XXL' | 'Silicone' | 'Gigantic'
 	buttSize: 'Small' | 'Medium' | 'Large' | 'Athletic'
-	personality:
-		| 'Caregiver'
-		| 'Sage'
-		| 'Inoccent'
-		| 'Jester'
-		| 'Temptress'
-		| 'Dominant'
-		| 'Submissive'
-		| 'Lover'
-		| 'Nympho'
-		| 'Mean'
-		| 'Confidant'
-		| 'Experimenter'
+	personality: Personality[]
 	occupation: Occupation
 	hobbies: Hobbies[]
-	relationship:
-		| 'Stranger'
-		| 'School Mate'
-		| 'Colleague'
-		| 'Mentor'
-		| 'Girlfriend'
-		| 'Sex Friend'
-		| 'Wife'
-		| 'Mistress'
-		| 'Friend'
-		| 'Best Friend'
-		| 'Step Sister'
-		| 'Step Mom'
-	clothing: Clothing
-	specialFeatures: 'Pubic Hair' | 'Pregnant' | 'Glasses' | 'Freckles' | 'Tattoos' | 'Belly Piercings' | 'Niple Piercings'
+	relationship: Relationship
+	clothing: FemalClothing.Bikini
+	specialFeatures: specialFeatures[]
+}
+
+export interface MaleModelTypes {
+	name: string
+	ehinicity: Ethnicity
+	age: number
+	eyeColor: EyeColor
+	hairStyle: 'Buzz Cut' | 'Long' | 'Slic Back' | 'Short' | 'Man-Bun' | 'Dreadlocks' | 'Curly' | 'Bald'
+	hairColor: 'Blonde' | 'Brown' | 'Black' | 'Ginger' | 'Gray' | 'White' | 'Pink'
+	bodyType: 'Slim' | 'Muscular' | 'Wide'
+	dickSize: 'Small' | 'Average' | 'Large' | 'Huge'
+	personality: [Personality.Beast, Personality.Dominant, Personality.Lover, Personality.Sage]
+	occupation: Occupation.Actor
+	hobbies: [Hobbies.Cooking, Hobbies.Swimming, Hobbies.Flirting]
+	relationship: Relationship.BestFriend
+	clothing: MaleClothing.SuitAndShirt
+	specialFeatures: specialFeatures.PubicHair
 }
 
 const FemalemodelData: FemaleModelTypes[] = [
@@ -205,7 +369,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		buttSize: 'Medium',
 		occupation: Occupation.Model,
 		hobbies: [Hobbies.SalsaDancing, Hobbies.DIYCrafting, Hobbies.Anime],
-		clothing: Clothing.LongDress,
+		clothing: FemalClothing.LongDress,
 		specialFeatures: 'Tattoos',
 	},
 	{
@@ -227,7 +391,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		buttSize: 'Small',
 		occupation: Occupation.Student,
 		hobbies: [Hobbies.Reading, Hobbies.Hiking],
-		clothing: Clothing.CasualWear,
+		clothing: FemalClothing.CasualWear,
 		specialFeatures: 'Glasses',
 	},
 	{
@@ -249,7 +413,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		buttSize: 'Medium',
 		occupation: Occupation.Chef,
 		hobbies: [Hobbies.SalsaDancing, Hobbies.Photography],
-		clothing: Clothing.Skirt,
+		clothing: FemalClothing.Skirt,
 		specialFeatures: 'Belly Piercings',
 	},
 	{
@@ -271,7 +435,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		buttSize: 'Medium',
 		occupation: Occupation.Teacher,
 		hobbies: [Hobbies.Reading, Hobbies.Traveling],
-		clothing: Clothing.TeachersAttire,
+		clothing: FemalClothing.TeachersAttire,
 		specialFeatures: 'Freckles',
 	},
 	{
@@ -292,7 +456,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		buttSize: 'Athletic',
 		occupation: Occupation.YogaInstructor,
 		hobbies: [Hobbies.Yoga, Hobbies.Hiking, Hobbies.Traveling],
-		clothing: Clothing.YogaOutfit,
+		clothing: FemalClothing.YogaOutfit,
 		specialFeatures: 'Tattoos',
 	},
 	{
@@ -313,7 +477,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		buttSize: 'Small',
 		occupation: Occupation.Photographer,
 		hobbies: [Hobbies.Photography, Hobbies.Traveling, Hobbies.Art],
-		clothing: Clothing.CasualWear,
+		clothing: FemalClothing.CasualWear,
 		specialFeatures: 'Tattoos',
 	},
 	{
@@ -334,7 +498,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		buttSize: 'Medium',
 		occupation: Occupation.Nurse,
 		hobbies: [Hobbies.Volunteering, Hobbies.Reading, Hobbies.Yoga],
-		clothing: Clothing.NurseUniform,
+		clothing: FemalClothing.NurseUniform,
 		specialFeatures: 'Niple Piercings',
 	},
 	{
@@ -355,7 +519,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		buttSize: 'Large',
 		occupation: Occupation.ExecutiveAssistant,
 		hobbies: [Hobbies.Traveling, Hobbies.Partying, Hobbies.Fitness],
-		clothing: Clothing.PencilDress,
+		clothing: FemalClothing.PencilDress,
 		specialFeatures: 'Pregnant',
 	},
 	{
@@ -376,7 +540,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		buttSize: 'Small',
 		occupation: Occupation.Student,
 		hobbies: [Hobbies.Reading, Hobbies.Calligraphy, Hobbies.Volunteering],
-		clothing: Clothing.Hijab,
+		clothing: FemalClothing.Hijab,
 		specialFeatures: 'Glasses',
 	},
 	{
@@ -397,7 +561,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		buttSize: 'Large',
 		occupation: Occupation.DanceInstructor,
 		hobbies: [Hobbies.SalsaDancing, Hobbies.Painting, Hobbies.Traveling],
-		clothing: Clothing.HipHopAttire,
+		clothing: FemalClothing.HipHopAttire,
 		specialFeatures: 'Glasses',
 	},
 ]
