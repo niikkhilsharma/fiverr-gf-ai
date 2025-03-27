@@ -324,11 +324,11 @@ export interface FemaleModelTypes {
 	bodyType: 'Fit' | 'Skinny' | 'Muscular' | 'Chubby'
 	breastSize: 'Flat' | 'Small' | 'Medium' | 'Large' | 'XXL' | 'Silicone' | 'Gigantic'
 	buttSize: 'Small' | 'Medium' | 'Large' | 'Athletic'
-	personality: Personality[]
+	personality: Personality
 	occupation: Occupation
 	hobbies: Hobbies[]
 	relationship: Relationship
-	clothing: FemalClothing.Bikini
+	clothing: FemalClothing
 	specialFeatures: specialFeatures[]
 }
 
@@ -345,7 +345,7 @@ export interface MaleModelTypes {
 	occupation: Occupation.Actor
 	hobbies: [Hobbies.Cooking, Hobbies.Swimming, Hobbies.Flirting]
 	relationship: Relationship.BestFriend
-	clothing: MaleClothing.SuitAndShirt
+	clothing: MaleClothing
 	specialFeatures: specialFeatures.PubicHair
 }
 
@@ -357,11 +357,11 @@ const FemalemodelData: FemaleModelTypes[] = [
 			'https://fantasyimg.com/va-O5iOSf2Ns7ISXBkOq49ZjoBQWaWqdRuSgdSVRSJc/wm:0.8:soea:20:20:0.3/aHR0cHM6Ly9mYW50/YXN5Z2YubnljMy5j/ZG4uZGlnaXRhbG9j/ZWFuc3BhY2VzLmNv/bS85N2NhNzU1MjY2/ZjM4ZGNkMWNmYWJm/YjYzODE1NzliNy5w/bmc.png',
 		about:
 			'Valentina Smith is pure temptation. With soft pink hair, a backless gown hugging her curves, and a gaze that sets you on fire, she’s every sinful fantasy come to life—a lover and a thrilling mystery all in one.',
-		relationship: 'Stranger',
-		personality: 'Lover',
+		relationship: Relationship.Stranger,
+		personality: Personality.Experimenter,
 		slug: 'valentina-smith',
-		ethnicity: 'Caucasian',
-		eyeColor: 'Brown',
+		ethnicity: Ethnicity.Caucasian,
+		eyeColor: EyeColor.Brown,
 		hairStyle: 'Long',
 		hairColor: 'Pink',
 		bodyType: 'Fit',
@@ -370,7 +370,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		occupation: Occupation.Model,
 		hobbies: [Hobbies.SalsaDancing, Hobbies.DIYCrafting, Hobbies.Anime],
 		clothing: FemalClothing.LongDress,
-		specialFeatures: 'Tattoos',
+		specialFeatures: [specialFeatures.Tattoos],
 	},
 	{
 		name: 'Aria Winter',
@@ -379,11 +379,11 @@ const FemalemodelData: FemaleModelTypes[] = [
 			'https://fantasyimg.com/cdn-cgi/image/width=1920,quality=95,format=webp/https://fantasyimg.com/YcKLJIPwYCimLdbHsCSgHIq6Trx6sTlhjDKPSlsETKw/wm:0.8:soea:20:20:0.3/aHR0cHM6Ly9mYW50/YXN5Z2YubnljMy5j/ZG4uZGlnaXRhbG9j/ZWFuc3BhY2VzLmNv/bS9jOTJkMTZlNTE4/MzYxODk4ZjMyZmIy/MmRkZDJhODZjNy5w/bmc.png',
 		about:
 			'Aria is a soft-spoken and intelligent woman with an insatiable curiosity for life. She’s the type to lose herself in books and poetry, but behind her gentle demeanor lies a deep passion for adventure.',
-		relationship: 'Friend',
-		personality: 'Caregiver',
+		relationship: Relationship.Friend,
+		personality: Personality.Caregiver,
 		slug: 'aria-winter',
-		ethnicity: 'Caucasian',
-		eyeColor: 'Blue',
+		ethnicity: Ethnicity.Caucasian,
+		eyeColor: EyeColor.Blue,
 		hairStyle: 'Long',
 		hairColor: 'Brunette',
 		bodyType: 'Skinny',
@@ -392,7 +392,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		occupation: Occupation.Student,
 		hobbies: [Hobbies.Reading, Hobbies.Hiking],
 		clothing: FemalClothing.CasualWear,
-		specialFeatures: 'Glasses',
+		specialFeatures: [specialFeatures.Glasses],
 	},
 	{
 		name: 'Luna Ashford',
@@ -401,11 +401,11 @@ const FemalemodelData: FemaleModelTypes[] = [
 			'https://fantasyimg.com/cdn-cgi/image/width=1920,quality=95,format=webp/https://fantasyimg.com/HXeyDX-YF42EoBSl2SLkXgYZf9OHiO4VK4I5IesLaS8/wm:0.8:soea:20:20:0.3/aHR0cHM6Ly9mYW50/YXN5Z2YubnljMy5j/ZG4uZGlnaXRhbG9j/ZWFuc3BhY2VzLmNv/bS8xMzdjOTEwMmFl/M2Y3OTY1ODk3ZGI5/MmVlODFiOTkzMi5w/bmc.png',
 		about:
 			"Luna is unpredictable—one moment she's teasing you with her wit, the next she's pulling you into a whirlwind of excitement. With an alluring smirk and a fearless attitude, she’s the ultimate wildcard.",
-		relationship: 'Best Friend',
-		personality: 'Jester',
+		relationship: Relationship.BestFriend,
+		personality: Personality.Beast,
 		slug: 'luna-ashford',
-		ethnicity: 'Latina',
-		eyeColor: 'Brown',
+		ethnicity: Ethnicity.Latina,
+		eyeColor: EyeColor.Brown,
 		hairStyle: 'curly',
 		hairColor: 'Black',
 		bodyType: 'Fit',
@@ -414,7 +414,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		occupation: Occupation.Chef,
 		hobbies: [Hobbies.SalsaDancing, Hobbies.Photography],
 		clothing: FemalClothing.Skirt,
-		specialFeatures: 'Belly Piercings',
+		specialFeatures: [specialFeatures.BellyPiercings],
 	},
 	{
 		name: 'Seraphina Monroe',
@@ -423,11 +423,11 @@ const FemalemodelData: FemaleModelTypes[] = [
 			'https://fantasyimg.com/cdn-cgi/image/width=1920,quality=95,format=webp/https://fantasyimg.com/rn5hNR0APEy_ty8T0IL_2m1-qqlTnPzYRp_geiX03ys/wm:0.8:soea:20:20:0.3/aHR0cHM6Ly9mYW50/YXN5Z2YubnljMy5j/ZG4uZGlnaXRhbG9j/ZWFuc3BhY2VzLmNv/bS8xMmJhMWE2MTUy/NDcxZjA2MzkxZmIw/NGVlODBlN2U2MS5w/bmc.png',
 		about:
 			'Seraphina is elegance personified. She carries herself with grace, always composed yet effortlessly seductive. She prefers deep conversations over small talk and sees beauty in every moment.',
-		relationship: 'Colleague',
-		personality: 'Sage',
+		relationship: Relationship.Colleague,
+		personality: Personality.Sage,
 		slug: 'seraphina-monroe',
-		ethnicity: 'Caucasian',
-		eyeColor: 'Green',
+		ethnicity: Ethnicity.Caucasian,
+		eyeColor: EyeColor.Green,
 		hairStyle: 'Long',
 		hairColor: 'Blonde',
 		bodyType: 'Fit',
@@ -436,133 +436,7 @@ const FemalemodelData: FemaleModelTypes[] = [
 		occupation: Occupation.Teacher,
 		hobbies: [Hobbies.Reading, Hobbies.Traveling],
 		clothing: FemalClothing.TeachersAttire,
-		specialFeatures: 'Freckles',
-	},
-	{
-		name: 'Layla Rodriguez',
-		age: 24,
-		avatar: 'https://example.com/layla-avatar.jpg',
-		about:
-			'Layla is a vibrant and energetic soul, always seeking new experiences and challenges. She has a contagious laugh and a warm heart, making her a joy to be around.',
-		relationship: 'Girlfriend',
-		personality: 'Experimenter',
-		slug: 'layla-rodriguez',
-		ethnicity: 'Latina',
-		eyeColor: 'Brown',
-		hairStyle: 'Straight',
-		hairColor: 'Brunette',
-		bodyType: 'Fit',
-		breastSize: 'Small',
-		buttSize: 'Athletic',
-		occupation: Occupation.YogaInstructor,
-		hobbies: [Hobbies.Yoga, Hobbies.Hiking, Hobbies.Traveling],
-		clothing: FemalClothing.YogaOutfit,
-		specialFeatures: 'Tattoos',
-	},
-	{
-		name: 'Mei Tanaka',
-		age: 29,
-		avatar: 'https://example.com/mei-avatar.jpg',
-		about:
-			'Mei is a mysterious and alluring woman with a sharp wit and an independent spirit. She has a passion for art and culture, and she enjoys exploring the hidden corners of the city.',
-		relationship: 'Sex Friend',
-		personality: 'Temptress',
-		slug: 'mei-tanaka',
-		ethnicity: 'Asian',
-		eyeColor: 'Brown',
-		hairStyle: 'Long',
-		hairColor: 'Black',
-		bodyType: 'Skinny',
-		breastSize: 'Small',
-		buttSize: 'Small',
-		occupation: Occupation.Photographer,
-		hobbies: [Hobbies.Photography, Hobbies.Traveling, Hobbies.Art],
-		clothing: FemalClothing.CasualWear,
-		specialFeatures: 'Tattoos',
-	},
-	{
-		name: 'Aisha Khan',
-		age: 33,
-		avatar: 'https://example.com/aisha-avatar.jpg',
-		about:
-			'Aisha is a kind and compassionate woman who is dedicated to helping others. She has a strong sense of justice and is always willing to stand up for what she believes in.',
-		relationship: 'Wife',
-		personality: 'Caregiver',
-		slug: 'aisha-khan',
-		ethnicity: 'Indian',
-		eyeColor: 'Brown',
-		hairStyle: 'Long',
-		hairColor: 'Black',
-		bodyType: 'Fit',
-		breastSize: 'Medium',
-		buttSize: 'Medium',
-		occupation: Occupation.Nurse,
-		hobbies: [Hobbies.Volunteering, Hobbies.Reading, Hobbies.Yoga],
-		clothing: FemalClothing.NurseUniform,
-		specialFeatures: 'Niple Piercings',
-	},
-	{
-		name: 'Nadia Petrova',
-		age: 27,
-		avatar: 'https://example.com/nadia-avatar.jpg',
-		about:
-			'Nadia is a confident and ambitious woman with a passion for success. She is a natural leader and is always striving to achieve her goals.',
-		relationship: 'Mistress',
-		personality: 'Dominant',
-		slug: 'nadia-petrova',
-		ethnicity: 'Caucasian',
-		eyeColor: 'Blue',
-		hairStyle: 'Long',
-		hairColor: 'Blonde',
-		bodyType: 'Fit',
-		breastSize: 'Large',
-		buttSize: 'Large',
-		occupation: Occupation.ExecutiveAssistant,
-		hobbies: [Hobbies.Traveling, Hobbies.Partying, Hobbies.Fitness],
-		clothing: FemalClothing.PencilDress,
-		specialFeatures: 'Pregnant',
-	},
-	{
-		name: 'Fatima Al-Mansoori',
-		age: 22,
-		avatar: 'https://example.com/fatima-avatar.jpg',
-		about:
-			'Fatima is a gentle and intelligent woman with a deep appreciation for her culture and heritage. She is studying to become a doctor and hopes to make a positive impact on her community.',
-		relationship: 'School Mate',
-		personality: 'Inoccent',
-		slug: 'fatima-al-mansoori',
-		ethnicity: 'Arabic',
-		eyeColor: 'Brown',
-		hairStyle: 'Long',
-		hairColor: 'Black',
-		bodyType: 'Skinny',
-		breastSize: 'Small',
-		buttSize: 'Small',
-		occupation: Occupation.Student,
-		hobbies: [Hobbies.Reading, Hobbies.Calligraphy, Hobbies.Volunteering],
-		clothing: FemalClothing.Hijab,
-		specialFeatures: 'Glasses',
-	},
-	{
-		name: 'Zola Adebayo',
-		age: 30,
-		avatar: 'https://example.com/zola-avatar.jpg',
-		about:
-			'Zola is a creative and free-spirited woman with a passion for music and dance. She is a talented artist and enjoys expressing herself through her art.',
-		relationship: 'Step Sister',
-		personality: 'Jester',
-		slug: 'zola-adebayo',
-		ethnicity: 'Black/Afro',
-		eyeColor: 'Brown',
-		hairStyle: 'Braids',
-		hairColor: 'Black',
-		bodyType: 'Fit',
-		breastSize: 'Medium',
-		buttSize: 'Large',
-		occupation: Occupation.DanceInstructor,
-		hobbies: [Hobbies.SalsaDancing, Hobbies.Painting, Hobbies.Traveling],
-		clothing: FemalClothing.HipHopAttire,
-		specialFeatures: 'Glasses',
+		specialFeatures: [specialFeatures.Freckles],
 	},
 ]
 

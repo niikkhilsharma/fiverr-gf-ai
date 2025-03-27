@@ -26,11 +26,11 @@ export async function POST(req: Request) {
 		}
 
 		// 2. Perform any additional processing or validation
-		const sanitizedModel = {
-			...validatedModel,
-			name: validatedModel.name.trim(),
-			about: validatedModel.about?.trim() || '',
-		}
+		// const sanitizedModel = {
+		// 	...validatedModel,
+		// 	name: validatedModel.name.trim(),
+		// 	about: validatedModel.about?.trim() || '',
+		// }
 
 		// 3. Save the model to your database
 		// const savedModel = await prisma.chatModel.create({
